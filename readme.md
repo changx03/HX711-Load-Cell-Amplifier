@@ -43,9 +43,11 @@ From Arduino IDE's library manager, search: `HX711 Arduino Library`
 
 For SI Unit (KGs) scaling:
 
-* Calibration factor: 311100
+* Channel A with Gain = 128: Calibration factor: 311100
 
 Calibrated on at Weight 8.1kg
+
+* Channel B with Gain = 32: Calibration factor: 83400
 
 ### Wire mapping
 
