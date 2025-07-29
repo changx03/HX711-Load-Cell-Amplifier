@@ -46,6 +46,6 @@ void setup() {
 void loop() {
   Serial.print("Reading: ");
   Serial.print(scale.get_units(), 1); //scale.get_units() returns a float
-  Serial.print(" lbs"); //You can change this to kg but you'll need to refactor the calibration_factor
+  Serial.print(" KGs"); //You can change this to kg but you'll need to refactor the calibration_factor
   Serial.println();
 }
