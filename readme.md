@@ -62,3 +62,8 @@ Calibrated on at Weight 8.1kg
 |---------|--------------|
 | Pin 2 | CLK |
 | Pin 3 | DAT |
+
+### Parts list
+
+* [SparkFun Load Cell Amplifier - HX711](https://www.sparkfun.com/sparkfun-load-cell-amplifier-hx711.html)
+* [DigiKey disc load cell](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/FC2311-0000-0250-L/809398)
