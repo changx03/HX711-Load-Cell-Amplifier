@@ -37,10 +37,11 @@
 
 #define LOADCELL_DOUT_PIN  3
 #define LOADCELL_SCK_PIN  2
+#define GAIN 32
 
 HX711 scale;
 
-float calibration_factor = 311100; //-7050 worked for my 440lb max scale setup
+float calibration_factor = 83400; //-7050 worked for my 440lb max scale setup
 
 void setup() {
   Serial.begin(9600);
@@ -50,7 +51,7 @@ void setup() {
   Serial.println("Press '+', 'a', 's', or 'd' to increase calibration factor");
   Serial.println("Press '-', 'z', 'x', or 'c' to decrease calibration factor");
 
-  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN, GAIN);
   scale.set_scale();
   scale.tare();	//Reset the scale to 0
 
