@@ -40,15 +40,15 @@
 
 HX711 scale;
 
-float calibration_factor = -7050; //-7050 worked for my 440lb max scale setup
+float calibration_factor = 311100; //-7050 worked for my 440lb max scale setup
 
 void setup() {
   Serial.begin(9600);
   Serial.println("HX711 calibration sketch");
   Serial.println("Remove all weight from scale");
   Serial.println("After readings begin, place known weight on scale");
-  Serial.println("Press + or a to increase calibration factor");
-  Serial.println("Press - or z to decrease calibration factor");
+  Serial.println("Press '+', 'a', 's', or 'd' to increase calibration factor");
+  Serial.println("Press '-', 'z', 'x', or 'c' to decrease calibration factor");
 
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
   scale.set_scale();
@@ -75,7 +75,15 @@ void loop() {
     char temp = Serial.read();
     if(temp == '+' || temp == 'a')
       calibration_factor += 10;
+    else if (temp == 's')
+      calibration_factor += 100;
+    else if (temp == 'd')
+      calibration_factor += 1000;
     else if(temp == '-' || temp == 'z')
       calibration_factor -= 10;
+    else if (temp == 'x')
+      calibration_factor -= 100;
+    else if (temp == 'c')
+      calibration_factor -= 1000;
   }
 }

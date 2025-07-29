@@ -1,10 +1,8 @@
-HX711 Load Cell Amplifier
-=======
+# HX711 Load Cell Amplifier
 
 ![Amplifier Layout](https://cdn.sparkfun.com/assets/parts/1/0/3/9/5/13230-01.jpg)
 
 *[SparkFun Load Cell Amplifier - HX711](https://www.sparkfun.com/products/13230)*
-
 
 The SparkFun Load Cell Amplifier is a small breakout board for the HX711 IC that allows you to easily read load cells to measure weight. By connecting the amplifier to your microcontroller you will be able to read the changes in the resistance of the load cell and with some calibration you’ll be able to get very accurate weight measurements. This can be handy for creating your own industrial scale, process control, or simple presence detection of an object.
 
@@ -20,21 +18,43 @@ Load cells use a four wire wheatstone bridge to connect to the HX711. These are 
 
 The YLW pin acts as an optional input that is not hooked up to the strain gauge but is utilized to ground and shield against outside EMI (electromagnetic interference). Please keep in mind that some load cells might have slight variations in color coding.
 
-Repository Contents
--------------------
+## Repository Contents
 
 * **/Production_Files** - Panelized version of the design for production
 * **/datasheets** - Datasheet for HX711 IC
 * **/firmware** - Example Arduino sketches
 * **/hardware** - All Eagle design files (.brd, .sch)
 
-Documentation
---------------
+## Documentation
+
 * **[Library](https://github.com/bogde/HX711)** - Arduino library for the HX711
 * **[Getting Started with Load Cells](https://learn.sparkfun.com/tutorials/getting-started-with-load-cells)** - Introduction to Load Cells
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide)** - Basic hookup guide for the Load Cell Amplifier
 
-License Information
--------------------
+## License Information
 
 This design is [OSHW](http://www.oshwa.org/definition/) and public domain but you buy me a beer if you use this and we meet someday ([Beerware license](http://en.wikipedia.org/wiki/Beerware)).
+
+## For FC2311-0000-0250-L
+
+For SI Unit (KGs) scaling:
+
+* Calibration factor: 311100
+
+Calibrated on at Weight 8.1kg
+
+### Wire mapping
+
+| Pin | Load cell | SparkFun Amp |
+|-----|-----------|--------------|
+| V+ | Red | RED |
+| + Output | Yellow | GRN |
+| GND | Green | BLK & YLW |
+| - Output | Blue | WHT |
+
+### Arduino mapping
+
+| Arduino | SparkFun Amp |
+|---------|--------------|
+| Pin 2 | CLK |
+| Pin 3 | DAT |
