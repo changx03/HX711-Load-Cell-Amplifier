@@ -35,6 +35,10 @@ The YLW pin acts as an optional input that is not hooked up to the strain gauge 
 
 This design is [OSHW](http://www.oshwa.org/definition/) and public domain but you buy me a beer if you use this and we meet someday ([Beerware license](http://en.wikipedia.org/wiki/Beerware)).
 
+## Install dependencies
+
+From Arduino IDE's library manager, search: `HX711 Arduino Library`
+
 ## For FC2311-0000-0250-L
 
 For SI Unit (KGs) scaling:
